@@ -1,0 +1,452 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+header{
+    height: 750px;
+    grid-area: header;
+}
+.header_Imagenes{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.menuinicio{
+    display: flex;
+    justify-content: space-between;
+}
+/*Grid Boxeo*/
+.navMenu{
+    display: flex;
+    align-items: start;
+}
+.logoPequeño{ 
+    margin: 3rem;
+    width: 200px;
+    border: solid;
+    text-align: start;
+}
+.ul_Botones{
+    margin: 3rem;
+}
+.ul_Botones li{
+    margin: 2rem;
+    display: inline;
+    font-size: 22px;
+}
+.ul_Botones li a:hover{
+    color: #ED6A5A;
+    border-radius: 10%;
+    background: #27262642;
+    transform: scale(1.05);
+}
+.ul_Botones li a{
+    transition: border-color 2s, color 0.3s;
+    color: rgb(235, 232, 232);
+}
+.logoRedes{
+    transition: border-color 0.3s, color 0.3s;
+    transition: transform 0.4s ease;
+    width: 40px
+}
+.logoRedes:hover{
+    transition: border-color 0.3s, color 0.3s;
+    transform: scale(1.1);
+}
+.textFooter{
+    display: flex;
+    flex-direction: column;
+}
+footer p{
+    color: #F0F2F4;
+    font-size: 15px;
+    background: #2e4442;
+    transition: transform 0.2s ease;
+}
+footer p:hover{
+    transform: scale(1.15);
+}
+.logoFooter{
+  
+    width: 150px;
+    transition: transform 0.4s ease;
+    border: solid #260000;
+    border-radius: 25%;
+}
+.logoFooter:hover{
+    transform: scale(1.32);
+}
+.content_SubTitulo-Beneficios{
+    font-size: 6rem;
+    display: flex;
+    
+}
+.content_SubTitulo-Beneficios p{
+    color: #ED6A5A;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*GRID INDEX*/
+.gridBoxeo-container{
+    margin-top: 20rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    grid-template-rows: auto auto auto; 
+    grid-auto-columns: 1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "header header"
+        "textoboxeo textoboxeo"
+        "Footer Footer"
+    ;
+}
+.textoBoxeo{
+    grid-area: textoboxeo;
+}
+.container1{
+    margin-top: 20rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    grid-template-rows: auto auto auto; 
+    grid-auto-columns: 1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "header header"
+        "main-text Horarios"
+        "main-text Horarios"
+        "Beneficios Beneficios"
+        "acordion acordion"
+        "Footer Footer"
+    ;
+}
+.content_Beneficios-section{
+    background: #2e4442;
+    padding: 0.3rem;
+    margin: 1.3rem;
+    transition: transform 0.4s ease;
+}
+.content_Beneficios-section:hover{
+    transform: scale(1.12);
+}
+.content_Beneficios{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #283b39;
+    color: white;
+    grid-area: Beneficios;
+    height: 30rem;
+}
+.content_horarios{
+    display: flex;
+    flex-direction: column;
+    grid-area: Horarios;
+}
+footer{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #283b39; 
+    border-top: solid #774446;
+    grid-area: Footer;
+}
+.Content_MainText{
+    display: flex;
+  
+    flex-direction: column;
+    text-align: center;
+    justify-self: center;
+    width: 500px;
+    grid-area: main-text;
+}
+.accordion{
+    grid-area: acordion;
+    justify-content: center;
+    margin: 4rem;
+}
+/* Color Theme Swatches in Hex */
+.Big-Machine-1-hex { color: #5D576B; }
+.Big-Machine-2-hex { color: #9BC1BC; }
+.Big-Machine-3-hex { color: #F4F1BB; }
+.Big-Machine-4-hex { color: #260000; }
+.Big-Machine-5-hex { color: #a0a59b; }
+.Big-Machine-1-hex { color: #ED6A5A; } 
+
+body::-webkit-scrollbar {
+    width: 0.4em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
+.textoSobreFotoInicio{
+    margin: 0;
+    padding: 2rem;
+    color:white;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.botonIrHaciaArriba{
+    position: fixed;
+    border: black solid 1px;
+    bottom: 10px;
+    right: 10px;
+}
+.content_SubTitulo{
+    text-align: center;
+    color: #ED6A5A;
+}
+.botonIrHaciaArriba img:hover{
+    opacity: 1.0;
+    border: black solid 1px;
+    transform: scale(1.1);
+
+}
+.botonIrHaciaArriba img{
+    width: 50px;
+    opacity: 0.2;
+    transition: transform 0.3s ease;
+}
+.img_Animacion:hover{
+    opacity: 1.0;
+  
+}
+.imagen_Seccion{
+
+}
+.imagen_Seccion-description{
+    display: flex;
+    text-align: center;
+    width: 22rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom: black 1px solid;
+}
+/*BackGrounds*/
+.header_Background{
+    background-image: url("../Assets/Imgs/FotoBoxeoFondo.jpg");
+    background-size:cover; 
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 700px;
+
+}
+.headerBoxeoBackground{
+    background-image: url("../Assets/Imgs/FondoBoxeo.jpg");
+    background-size:cover; 
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+.imagen_Seccion img{
+    width: 350px;
+}
+.imagen_Seccion h6{
+    margin-top: 15rem;
+    height: 100px;
+    font-size: 2rem;
+    text-align: center;
+    background-color:rgb(24, 46, 75)  ;
+    display: flex;
+    flex-direction: column-reverse;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+.imagen_Seccion h6:hover{
+    background: #ED6A5A;
+}
+a{
+    text-decoration: none;
+}
+.content_table_style{
+    margin: 50px auto;
+    width: 60%;
+    border: #260000;
+}
+.horarios { 
+    background-color: #fff;
+    margin: 2rem;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content_SubTitulo-horarios{
+    font-size: 6rem;
+    text-align: center;
+}
+.content_textoBeneficios{
+    display: flex;
+    justify-content: space-evenly;
+}
+.content_Beneficios h4{
+    color: #ED6A5A;
+}
+h2 {
+    text-align: center;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.2s ease-in;
+}
+
+th {
+    background-color: #f2f2f2;
+    
+}
+td:hover{
+    transform: scale(1.12);
+
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 550px) {
+
+    .horarios { 
+        background-color: #fff;
+        margin: 0.02rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 10px;
+    }
+    .content_horarios{
+       align-items: center;
+       font-size: 80%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 0.2px;
+        text-align: center;
+        font-size: 105%;
+    }
+    .content_SubTitulo-horarios{
+        font-size: 5rem;
+    }
+    .content_Beneficios-section h4{
+        font-size: 90%;
+    }
+    .content_Beneficios-section{
+        margin: 1rem;
+        font-size: 90%;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+    .content_Beneficios{
+    
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .content_Beneficios-section p:hover{
+        transform: scale(2);
+    }
+    .content_SubTitulo-Beneficios{
+        font-size: 2rem;
+    }
+    .content_textoBeneficios{
+        font-size: 10px;
+    }
+    body{
+        width:auto;
+    }
+    .logoPequeño{ 
+        margin: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+    .header_Imagenes img{
+        width: 80%;
+    }
+    .header_Imagenes{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header{
+        height: 1700px;
+        margin-bottom: 2rem;
+    }
+    .container1{
+        margin-top: 35rem;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 6fr auto auto; 
+        gap: 1px 1px;
+        grid-template-areas:
+            "header"
+            "main-text"
+            "Horarios"
+            "Beneficios"
+            "acordion"
+            "Footer"
+        ;
+    }
+    .logoRedes{
+        width: 40px
+    }
+    table {
+        width: 40%;
+    
+    }
+    .Content_MainText{
+        width: 300px;
+        font-size: 90%;
+    }
+    .navMenu{
+        width: 50%;
+        margin-right: auto;
+      
+    }
+    .imagen_Seccion-description{
+        width: auto;
+        margin: 1rem;
+        align-self: center;
+    }
+    .menuinicio{
+        display: flex;
+        flex-direction: column;
+    }
+    .ul_Botones{
+        background: transparent;
+        width: 50%;
+        margin: 0;
+        padding-left:  0;
+        margin-bottom: 3rem;
+    }
+    .ul_Botones a{ 
+        align-items: start;
+        font-size: 70%;
+        border-radius: 5px;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+    
+}
+
+

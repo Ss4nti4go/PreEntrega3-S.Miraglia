@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../vsCodeStuff/PaginasCoderHouse"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../after1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PrimeraEntrega"
+	}
+}
