@@ -6,7 +6,8 @@
     animation: fadeIn 1s ease-in-out;
 }
 header{
-    height: 750px;
+    height: 1000px;
+    margin-bottom: 5rem;
     grid-area: header;
 }
 .header_Imagenes{
@@ -57,12 +58,14 @@ header{
     transform: scale(1.1);
 }
 .textFooter{
+    
     display: flex;
     flex-direction: column;
 }
 footer p{
     color: #F0F2F4;
-    font-size: 15px;
+    text-align: center;
+    padding: 0.2rem;
     background: #2e4442;
     transition: transform 0.2s ease;
 }
@@ -84,37 +87,42 @@ footer p:hover{
     display: flex;
     
 }
+.content_SubTitulo_Boxeo{
+    font-size: 4rem;
+    color: #ED6A5A;
+}
 .content_SubTitulo-Beneficios p{
+    display: flex;
+    color: #ED6A5A;
+}
+.content_SubTitulo-Estudiantes{
+    display: flex;
+    color: #ED6A5A;
+    font-size: 4rem;
+}
+.content_SubTitulo-Estudiantes p{
+    display: flex;
+    font-size: 3.5rem;
+    color: #ffffff;
+
+}
+.Estudiante_nombre{
+   
+    font-size: 1rem;
+    color: white;
+}
+.content_SubTitulo-Motivacion{
+    display: flex;
+    color: #ffffff;
+    font-size: 6rem;
+}
+.content_SubTitulo-Motivacion p{
+    font-size: 6rem;
     color: #ED6A5A;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 /*GRID INDEX*/
-.gridBoxeo-container{
-    margin-top: 20rem;
-    display: grid;
-    grid-template-columns: 3fr 2fr; 
-    grid-template-rows: auto auto auto; 
-    grid-auto-columns: 1fr;
-    gap: 5px 5px;
-    grid-template-areas:
-        "header header"
-        "textoboxeo textoboxeo"
-        "Footer Footer"
-    ;
-}
-.textoBoxeo{
-    grid-area: textoboxeo;
-}
 .container1{
     margin-top: 20rem;
     display: grid;
@@ -131,11 +139,76 @@ footer p:hover{
         "Footer Footer"
     ;
 }
+.gridBoxeo-container{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr; 
+    grid-template-rows: auto auto auto; 
+    grid-auto-columns: 1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "header header"
+        "imagenes_Menu imagenes_Menu"
+        "main-text Box_imagenes"
+        "Motivacion Motivacion"
+        "Footer Footer"
+    ;
+}
+.motivacion_container{
+    margin-top: 5rem;
+    margin-bottom: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #77928f;
+    width: auto;
+    color: #ED6A5A;
+    grid-area: Motivacion;
+    height: 30rem;
+}
+
 .content_Beneficios-section{
     background: #2e4442;
+    grid-area: Beneficios;
     padding: 0.3rem;
     margin: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_Boximages{
+    background: #2e4442;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin-top: 15rem;
+    margin-left: 10rem;
+    margin-right: 2rem;
+    margin-bottom: 5rem;
+    grid-area: Box_imagenes;
+    height: auto;
+    width:31rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ED6A5A;
+   
+}
+
+.container_Boximages img{
+    margin: 1.5rem;
+    width: 300px;
     transition: transform 0.4s ease;
+}
+.container_Boximages img:hover{
+    transform: scale(1.05);
+}
+.header_Imagenes{
+    grid-area: imagenes_Menu ;
 }
 .content_Beneficios-section:hover{
     transform: scale(1.12);
@@ -148,6 +221,7 @@ footer p:hover{
     align-items: center;
     justify-content: center;
     background: #283b39;
+    width: auto;
     color: white;
     grid-area: Beneficios;
     height: 30rem;
@@ -162,23 +236,30 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #283b39; 
+    background-color: #3e5553; 
     border-top: solid #774446;
     grid-area: Footer;
 }
 .Content_MainText{
     display: flex;
-  
+    margin-top: 5rem;
     flex-direction: column;
-    text-align: center;
-    justify-self: center;
-    width: 500px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font-size: larger;
     grid-area: main-text;
+}
+.Content_MainText div{
+    text-align: center;
+    width: 500px;
+
 }
 .accordion{
     grid-area: acordion;
     justify-content: center;
     margin: 4rem;
+    margin-bottom: 6rem;
 }
 /* Color Theme Swatches in Hex */
 .Big-Machine-1-hex { color: #5D576B; }
@@ -233,7 +314,7 @@ body::-webkit-scrollbar {
   
 }
 .imagen_Seccion{
-
+    max-width: 600px;
 }
 .imagen_Seccion-description{
     display: flex;
@@ -327,24 +408,25 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1100px) {
 
     .horarios { 
         background-color: #fff;
-        margin: 0.02rem;
+        margin: 0.1rem;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-size: 10px;
     }
     .content_horarios{
        align-items: center;
-       font-size: 80%;
+       font-size: 100%;
     }
     th, td {
         border: 1px solid #ddd;
-        padding: 0.2px;
+        margin: 3px;
+        padding: 3px;
         text-align: center;
-        font-size: 105%;
+        font-size: 120%;
     }
     .content_SubTitulo-horarios{
         font-size: 5rem;
@@ -356,43 +438,47 @@ tr:nth-child(even) {
         margin: 1rem;
         font-size: 90%;
         transition: transform 0.3s ease;
-        transition: transform 0.3s ease;
+
     }
     .content_Beneficios{
-    
+
         width: auto;
         display: flex;
         flex-direction: column;
     }
+
     .content_Beneficios-section p:hover{
         transform: scale(2);
     }
     .content_SubTitulo-Beneficios{
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .content_textoBeneficios{
-        font-size: 10px;
+        font-size: 15px;
     }
-    body{
-        width:auto;
-    }
+  
     .logoPequeño{ 
         margin: 1rem;
         width: 40px;
         height: 40px;
     }
     .header_Imagenes img{
+        max-width: 500px;
         width: 80%;
+      
     }
     .header_Imagenes{
+        width: auto;
+        margin-bottom: 5rem;
+        align-items: center;
         display: flex;
         flex-direction: column;
     }
-    
     header{
         height: 1700px;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
+   
     .container1{
         margin-top: 35rem;
         display: grid;
@@ -408,22 +494,80 @@ tr:nth-child(even) {
             "Footer"
         ;
     }
+    .gridBoxeo-container{
+        margin-top: 35rem;
+        display: grid;
+        grid-template-columns: 3fr; 
+        grid-template-rows: auto auto auto; 
+        grid-auto-columns: 1fr;
+        gap: 5px 5px;
+        grid-template-areas:
+            "header"
+            "imagenes_Menu"
+            "main-text"
+            "Motivacion"
+            "Box_imagenes"
+            "Footer"
+        ;
+    }
+    .container{
+        width: 500px;
+    }
     .logoRedes{
         width: 40px
     }
     table {
         width: 40%;
-    
     }
+    .accordion-color{
+        background-color: #5D576B;
+        color: white;
+    }  
     .Content_MainText{
-        width: 300px;
+        margin-top: 2rem;
+        width: auto;
         font-size: 90%;
+        text-align: center;
+    }
+    .container_Boximages{
+        width: auto;
+        height: auto;
+        margin-bottom: 4rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: large;
+    }
+    .container_Boximages-subContainer{
+        width: 20rem;
+    }
+    .container_Boximages img{
+        width: 80%;
+        max-width: 300px;
+        margin: 1rem;
+    }
+    .containter_Boximages-estudiantes{
+        display: flex;
+        flex-direction: column;
     }
     .navMenu{
         width: 50%;
         margin-right: auto;
-      
     }
+    .motivacion_container{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 90%;
+        width: auto;height: 15rem;
+        
+    }
+    .content_SubTitulo-Motivacion{
+        display: flex;
+        font-size: 3rem;
+    }
+  
     .imagen_Seccion-description{
         width: auto;
         margin: 1rem;
@@ -446,7 +590,19 @@ tr:nth-child(even) {
         border-radius: 5px;
         background-color:rgba(0, 0, 0, 0.5);
     }
-    
+    footer{
+        width: auto;
+    }
 }
 
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
