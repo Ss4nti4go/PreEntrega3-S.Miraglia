@@ -66,7 +66,7 @@ header{
 
 .content_SubTitulo-Beneficios{
     font-size: 6rem;
-    text-align:center;
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -77,7 +77,6 @@ header{
     color: #ED6A5A;
 }
 .content_SubTitulo-Beneficios p{
-    display: flex;
     color: #ED6A5A;
 }
 .content_SubTitulo-Estudiantes{
@@ -369,6 +368,7 @@ body::-webkit-scrollbar {
     background-color:rgba(0, 0, 0, 0.5);
 }
 
+
 /*CIERRA BARRA DESLIZANTE Y BOTON ESTATICO IR ARRIBA*/
 .content_SubTitulo{
     text-align: center;
@@ -645,24 +645,23 @@ footer img{
 .Footer_logo:hover{
     transform: scale(1.32);
 }
-.botonIrHaciaArriba{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
 .botonIrHaciaArriba img{
-    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 2px -3px 10px 10px #00000000;
-    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
     width: 50px;
     opacity: 0.2;
     transition: transform 0.3s ease;
+}
+.botonIrHaciaArriba img{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 2px -3px 20px 10px #00000000;
+    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0);
 }
 .botonIrHaciaArriba img:hover{
     opacity: 1.0;
     transform: scale(1.1);
 }
-
 @media (max-width: 1250px) {
     /*MEJORA Responsividad MENU*/
     .header_menuinicio{
