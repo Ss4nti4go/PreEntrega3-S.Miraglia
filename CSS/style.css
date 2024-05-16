@@ -3,91 +3,75 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
 }
+/*ARRANCA CSS HEADER*/
 header{
     height: 1000px;
     margin-bottom: 5rem;
     grid-area: header;
+}
+.header {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .header_Imagenes{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
 }
-.menuinicio{
+.header_menuinicio{
     display: flex;
     justify-content: space-between;
 }
-/*Grid Boxeo*/
-.navMenu{
+.header_textoInicio{
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background-color: #00000081;
+}
+.header_navMenu{
     display: flex;
     align-items: start;
 }
-.logoPequeño{ 
+.header_logoPequeño{ 
     margin: 3rem;
     width: 200px;
     border: solid;
     text-align: start;
 }
-.ul_Botones{
+.header_ul_Botones{
     margin: 3rem;
+
 }
-.ul_Botones li{
+.header_ul_Botones li{
+    background:rgba(0, 0, 0, 0.555);
     margin: 2rem;
+    padding: 0.1rem;
     display: inline;
     font-size: 22px;
 }
-.ul_Botones li a:hover{
+.header_ul_Botones li a:hover{
     color: #ED6A5A;
     border-radius: 10%;
     background: #27262642;
     transform: scale(1.05);
 }
-.ul_Botones li a{
+.header_ul_Botones li a{
     transition: border-color 2s, color 0.3s;
     color: rgb(235, 232, 232);
 }
-.logoRedes{
-    transition: border-color 0.3s, color 0.3s;
-    transition: transform 0.4s ease;
-    width: 40px
-}
-.logoRedes:hover{
-    transition: border-color 0.3s, color 0.3s;
-    transform: scale(1.1);
-}
-.textFooter{
-    
-    display: flex;
-    flex-direction: column;
-}
-footer p{
-    color: #F0F2F4;
-    text-align: center;
-    padding: 0.2rem;
-    background: #2e4442;
-    transition: transform 0.2s ease;
-}
-footer p:hover{
-    transform: scale(1.15);
-}
-.logoFooter{
-  
-    width: 150px;
-    transition: transform 0.4s ease;
-    border: solid #260000;
-    border-radius: 25%;
-}
-.logoFooter:hover{
-    transform: scale(1.32);
-}
+/*TERMINA CSS HEADER*/
+
 .content_SubTitulo-Beneficios{
     font-size: 6rem;
     display: flex;
-    
+    flex-direction: column;
 }
 .content_SubTitulo_Boxeo{
+    display: flex;
+    flex-direction: column;
     font-size: 4rem;
     color: #ED6A5A;
 }
@@ -97,6 +81,7 @@ footer p:hover{
 }
 .content_SubTitulo-Estudiantes{
     display: flex;
+    flex-direction: column;
     color: #ED6A5A;
     font-size: 4rem;
 }
@@ -104,10 +89,14 @@ footer p:hover{
     display: flex;
     font-size: 3.5rem;
     color: #ffffff;
-
+}
+.content_SubTitulo-Musculacion{
+    display: flex;
+    flex-direction: column;
+    color: #ED6A5A;
+    font-size: 2.5rem;
 }
 .Estudiante_nombre{
-   
     font-size: 1rem;
     color: white;
 }
@@ -120,9 +109,61 @@ footer p:hover{
     font-size: 6rem;
     color: #ED6A5A;
 }
-
-
-/*GRID INDEX*/
+.container_Musculacion h5{
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #ED6A5A;
+}
+.container_Musculacion_textoIzquierda p{
+    color: white;
+}
+.container_Musculacion_textoIzquierda_text{
+    margin: 2rem;
+    background-color: #3e5553;
+    transition: transform 0.3s ease;
+    -webkit-box-shadow: 0px 0px 15px 4px rgba(78,102,100,0.57);
+    -moz-box-shadow: 0px 0px 15px 4px #4e666491;
+    box-shadow: 0px 0px 15px 4px rgba(78,102,100,0.57);
+    padding: 1rem;
+}
+.container_Musculacion_textoIzquierda_text:hover{
+    transform: scale(1.1);
+}
+.content_SubTitulo-imagenesMusculacion{
+    text-align: center;
+    font-size: 3.5rem;
+    color: black;
+}
+.content_SubTitulo-imagenesMusculacion p{
+    font-size: 3.5rem;
+    color: #ED6A5A;
+}
+.container_Musculacion_textoIzquierda{
+    background-color: #2e4442;
+    margin-right: 10rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    -webkit-box-shadow: 5px -3px 20px 4px rgba(78,102,100,0.57);
+    -moz-box-shadow: 5px -3px 20px 4px #4e666491;
+    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
+    
+}
+.container_Musculacion-galeria{
+    display: flex;
+    justify-content: center;
+}
+.container_Musculacion-galeria img{
+    margin: 4rem;
+    transition: transform 0.2s ease;
+}
+.container_Musculacion-galeria img:hover{
+    transform: scale(1.1);
+    
+}
+/*GRID INDEX: Asi se organizará la informacion de la pagina boxeo de 1200px de ancho en adelante*/
 .container1{
     margin-top: 20rem;
     display: grid;
@@ -139,6 +180,7 @@ footer p:hover{
         "Footer Footer"
     ;
 }
+/*GRID BOXEO: Asi se organizará la informacion de la pagina boxeo de 1200px de ancho en adelante*/
 .gridBoxeo-container{
     margin-top: 3rem;
     display: grid;
@@ -166,17 +208,24 @@ footer p:hover{
     color: #ED6A5A;
     grid-area: Motivacion;
     height: 30rem;
+    -webkit-box-shadow: 5px -3px 20px 4px #9BC1BC;
+    -moz-box-shadow: 5px -3px 20px 4px #9BC1BC;
+    box-shadow: 5px -3px 20px 4px #9BC1BC;
 }
 
 .content_Beneficios-section{
     background: #2e4442;
     grid-area: Beneficios;
     padding: 0.3rem;
-    margin: 1.3rem;
+    margin: 1.6rem;
     display: flex;
     flex-direction: column;
+    transition: transform 0.4s ease;
+    -webkit-box-shadow: 5px -3px 10px 4px rgba(78,102,100,0.57);
+    -moz-box-shadow: 5px -3px 10px 4px #4e666491;
+    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
 }
-
+/*Contendor de imagenes en pagina BOXEO*/
 .container_Boximages{
     background: #2e4442;
     padding-left: 3rem;
@@ -196,23 +245,33 @@ footer p:hover{
     justify-content: center;
     align-items: center;
     color: #ED6A5A;
-   
+    -webkit-box-shadow: 5px -3px 10px 4px rgba(78,102,100,0.57);
+    -moz-box-shadow: 5px -3px 10px 4px #4e666491;
+    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
 }
 
 .container_Boximages img{
     margin: 1.5rem;
     width: 300px;
     transition: transform 0.4s ease;
+    -webkit-box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
+-moz-box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
+box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
 }
 .container_Boximages img:hover{
     transform: scale(1.05);
+    -webkit-box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
+    -moz-box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
+    box-shadow: 0px 0px 30px 4px rgba(78,102,100,1);
 }
+/*CIERRA Contendor de imagenes en pagina BOXEO*/
 .header_Imagenes{
     grid-area: imagenes_Menu ;
 }
 .content_Beneficios-section:hover{
     transform: scale(1.12);
 }
+/*Contendor de Beneficios, acordion y tabla de horarios en pagina INDEX*/
 .content_Beneficios{
     margin-top: 15rem;
     margin-bottom: 15rem;
@@ -225,50 +284,70 @@ footer p:hover{
     color: white;
     grid-area: Beneficios;
     height: 30rem;
+    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 2px -3px 20px 10px #00000091;
+    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
 }
 .content_horarios{
     display: flex;
     flex-direction: column;
     grid-area: Horarios;
 }
-footer{
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #3e5553; 
-    border-top: solid #774446;
-    grid-area: Footer;
+.custom-accordion-button {
+    background-color: #f8f9fa; /* Cambia el color de fondo del botón del acordeón */
+    color: #007bff; /* Cambia el color del texto del botón del acordeón */
+    border: 1px solid #ced4da; /* Cambia el borde del botón del acordeón */
 }
-.Content_MainText{
-    display: flex;
-    margin-top: 5rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    font-size: larger;
-    grid-area: main-text;
-}
-.Content_MainText div{
-    text-align: center;
-    width: 500px;
 
+.custom-accordion-body {
+    background-color: #f8f9fa; /* Cambia el color de fondo del cuerpo del acordeón */
+    color: #343a40; /* Cambia el color del texto del cuerpo del acordeón */
 }
 .accordion{
     grid-area: acordion;
     justify-content: center;
     margin: 4rem;
     margin-bottom: 6rem;
+    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 2px -3px 20px 10px #00000091;
+    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
 }
-/* Color Theme Swatches in Hex */
+/*CIERRA Contendor de Beneficios y tabla de horarios en pagina INDEX*/
+.container_Musculacion{
+    justify-content: center;
+    margin-top: 40rem;
+    display: flex;
+}
+.Content_MainText{
+    display: flex;
+    margin-top: 5rem;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font-size: larger;
+    height: auto;
+    grid-area: main-text;
+}
+
+.Content_MainText div{
+    text-align: center;
+    width: 500px;
+    padding: 2rem;
+    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 2px -3px 20px 10px #00000091;
+    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+}
+
+/*Colores*/
 .Big-Machine-1-hex { color: #5D576B; }
 .Big-Machine-2-hex { color: #9BC1BC; }
 .Big-Machine-3-hex { color: #F4F1BB; }
 .Big-Machine-4-hex { color: #260000; }
 .Big-Machine-5-hex { color: #a0a59b; }
 .Big-Machine-1-hex { color: #ED6A5A; } 
-
+/* BARRA DESLIZANTE Y BOTON ESTATICO IR ARRIBA*/
 body::-webkit-scrollbar {
     width: 0.4em;
   }
@@ -294,21 +373,23 @@ body::-webkit-scrollbar {
     bottom: 10px;
     right: 10px;
 }
-.content_SubTitulo{
-    text-align: center;
-    color: #ED6A5A;
-}
 .botonIrHaciaArriba img:hover{
     opacity: 1.0;
     border: black solid 1px;
     transform: scale(1.1);
-
 }
 .botonIrHaciaArriba img{
     width: 50px;
     opacity: 0.2;
     transition: transform 0.3s ease;
 }
+/*CIERRA BARRA DESLIZANTE Y BOTON ESTATICO IR ARRIBA*/
+.content_SubTitulo{
+    text-align: center;
+    color: #ED6A5A;
+}
+
+
 .img_Animacion:hover{
     opacity: 1.0;
   
@@ -325,23 +406,43 @@ body::-webkit-scrollbar {
     border-bottom: black 1px solid;
 }
 /*BackGrounds*/
-.header_Background{
-    background-image: url("../Assets/Imgs/FotoBoxeoFondo.jpg");
-    background-size:cover; 
-    background-position:center;
-    background-repeat: no-repeat;
-    height: 700px;
 
+.header_Index{
+    background-image: url("../Assets/Imgs/FotoBoxeoFondo.svg");
+    height: 700px;
 }
-.headerBoxeoBackground{
-    background-image: url("../Assets/Imgs/FondoBoxeo.jpg");
+.header_Boxeo{
+    background-image: url("../Assets/Imgs/FondoBoxeo.svg");
+    height: 700px;
+}
+.header_Galeria{
+    background-image: url("../Assets/Imgs/fondoGaleria.svg");
+    height: 900px;
+}
+.header_Contact{
+    background-image: url("../Assets/Imgs/fontoContactanos.svg");
+    height: 1200px;
+}
+.header_Musculacion{
+    background-image: url("../Assets/Imgs/fotofondoGimnasio.svg");
+    height: 700px;
+}
+.header_background , .header_Index, .header_Boxeo{
     background-size:cover; 
     background-position:center;
     background-repeat: no-repeat;
-    height: 700px;
+    -webkit-box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 0px 30px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
 }
+/*CIERRA BackGrounds*/
 .imagen_Seccion img{
     width: 350px;
+}
+img{
+    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .imagen_Seccion h6{
     margin-top: 15rem;
@@ -365,6 +466,10 @@ a{
     margin: 50px auto;
     width: 60%;
     border: #260000;
+    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    
 }
 .horarios { 
     background-color: #fff;
@@ -407,26 +512,224 @@ td:hover{
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+.Galeria_imagenes{
+    justify-content: center;
+    display: flex;
+    width: auto;
+    padding: 2rem;
+    margin-top: 40rem;
+    background-color: #b0b4abcb;
+    -webkit-box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.Galeria_imagenes img{
+    width: 80%;
+    margin: 2rem;
+    transition: transform 0.2s ease-out;
+}
+.Galeria_imagenes img:hover{
+    transform: scale(1.05);
+}
+.Galeria_imagenes-contenedor{
+    padding: 2rem;
+    background-color: #a3a89e;
+}
+.container_contactanos{
+    display: flex;
+    justify-content: center;
+}
 
+fieldset{
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+.container_contactanos-form {
+    margin-top: 3rem;
+    display: flex;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #397a3c;
+}
+
+.container_contactanos-form input[type="text"],
+.container_contactanos-form textarea {
+    transition: border-color 0.3s ease-in-out;
+}
+
+.container_contactanos-form input[type="text"]:focus,
+.container_contactanos-form textarea:focus {
+    border-color: #4CAF50;
+}
+.container_contact-boostrap{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+.container_contact-boostrap h2{
+    margin: 0.3rem;
+    color: rgb(0, 0, 0);
+    background: rgba(228, 228, 228, 0.692);
+}
+.container_contact-boostrap h3{
+    margin: 0rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.692)
+}
+/*FOOTER*/
+
+footer{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e5553; 
+    border-top: solid #774446;
+    margin-top: 7rem;
+    grid-area: Footer;
+    -webkit-box-shadow: 2px -3px 30px 10px #774446;
+    -moz-box-shadow: 2px -3px 30px 10px #774446;
+    box-shadow: 2px -3px 30px 10px #774446;
+}
+.Footer_logoRedes{
+    transition: border-color 0.3s, color 0.3s;
+    transition: transform 0.4s ease;
+    width: 40px
+}
+.Footer_logoRedes:hover{
+    transition: border-color 0.3s, color 0.3s;
+    transform: scale(1.1);
+}
+.Footer_text{
+    
+    display: flex;
+    flex-direction: column;
+}
+footer p{
+    color: #F0F2F4;
+    text-align: center;
+    padding: 0.2rem;
+    background: #2e4442;
+    transition: transform 0.2s ease;
+}
+footer p:hover{
+    transform: scale(1.15);
+}
+.Footer_logo{
+    width: 150px;
+    transition: transform 0.4s ease;
+    border: solid #260000;
+    border-radius: 25%;
+}
+footer img{
+    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 2px -3px 10px 10px #00000000;
+    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
+}
+.Footer_logo:hover{
+    transform: scale(1.32);
+}
+@media (max-width: 1250px) {
+    /*MEJORA Responsividad MENU*/
+    .header_menuinicio{
+        background: #4b4657a2;
+        font-size: 80%;
+        margin-bottom: 8rem;
+        align-items: end;
+    }
+    .header_logoPequeño{ 
+        margin: 1rem;
+  
+        width: 100px;
+        height: 100px;
+    }
+    .header_ul_Botones{
+        margin: 0;
+        padding: 0;
+    
+    }
+    .header_ul_Botones li{
+        background:none;
+        padding: 0;
+    }
+    
+    .container_Boximages{margin-right: 0; margin-left: auto;}
+
+}
 @media (max-width: 1100px) {
 
+    
+   
+    /*Responsividad general del INDEX*/
+    .container1{
+        margin-top: 35rem;
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 6fr; 
+        grid-template-areas:
+            "header"
+            "main-text"
+            "Horarios"
+            "Beneficios"
+            "acordion"
+            "Footer"
+        ;
+    }
     .horarios { 
         background-color: #fff;
-        margin: 0.1rem;
+       
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-size: 10px;
     }
     .content_horarios{
+        width: auto;
+        margin-top: 5rem;
        align-items: center;
-       font-size: 100%;
+       font-size: 90%;
+    }
+    .content_table_style{
+        margin: 0.2rem;
     }
     th, td {
         border: 1px solid #ddd;
-        margin: 3px;
+        margin: 2px;
         padding: 3px;
         text-align: center;
-        font-size: 120%;
+        font-size: 90%;
+    }
+    table {
+        width: 40%;
     }
     .content_SubTitulo-horarios{
         font-size: 5rem;
@@ -437,35 +740,35 @@ tr:nth-child(even) {
     .content_Beneficios-section{
         margin: 1rem;
         font-size: 90%;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
 
     }
-    .content_Beneficios{
-
+    .content_textoBeneficios{
         width: auto;
+        height: auto;
         display: flex;
         flex-direction: column;
     }
-
-    .content_Beneficios-section p:hover{
-        transform: scale(2);
+    .content_Beneficios{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        height: auto;
+    }
+    .content_Beneficios-section:hover{
+        transform: scale(1.1);
     }
     .content_SubTitulo-Beneficios{
-        font-size: 4rem;
+        font-size: 3.3rem;
     }
-    .content_textoBeneficios{
-        font-size: 15px;
-    }
-  
-    .logoPequeño{ 
-        margin: 1rem;
-        width: 40px;
-        height: 40px;
-    }
+    .accordion-color{
+        background-color: #5D576B;
+        color: white;
+    }  
+    /*CIERRA Responsividad general del INDEX*/
+    /*Responsividad general*/
     .header_Imagenes img{
-        max-width: 500px;
+        max-width: 450px;
         width: 80%;
-      
     }
     .header_Imagenes{
         width: auto;
@@ -478,29 +781,59 @@ tr:nth-child(even) {
         height: 1700px;
         margin-bottom: 4rem;
     }
-   
-    .container1{
-        margin-top: 35rem;
-        display: grid;
-        grid-template-columns: 1fr; 
-        grid-template-rows: 6fr auto auto; 
-        gap: 1px 1px;
-        grid-template-areas:
-            "header"
-            "main-text"
-            "Horarios"
-            "Beneficios"
-            "acordion"
-            "Footer"
-        ;
+    .header_menuinicio{
+        margin-bottom: 3rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .header_ul_Botones{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .header_ul_Botones li{
+        text-align: center;
+        margin: 0.1rem;
+    }
+    .header_logoPequeño{
+        margin-bottom: 0;
+    }
+    .header_navMenu{
+        flex-direction: column;
+    }
+    .Content_MainText{
+        text-wrap: wrap;
+        margin-bottom: 5rem;
+        width: auto;
+        height: 110%;
+        font-size: 70%;
+    }
+    .Content_MainText div{
+        padding: 0.1rem;
+        width: 100%;
+    }
+    .container{
+        width: 110%;
+    }
+    .Footer_logoRedes{
+        width: 40px
+    }
+  
+    footer{
+        width: auto;
+    }
+    /*CIERRA Responsividad general*/
+
+
+    /*edicion de responsividad de pagina BOXEO*/
     .gridBoxeo-container{
         margin-top: 35rem;
         display: grid;
         grid-template-columns: 3fr; 
-        grid-template-rows: auto auto auto; 
-        grid-auto-columns: 1fr;
-        gap: 5px 5px;
+        grid-template-rows: auto; 
+        grid-auto-columns: 2fr;
         grid-template-areas:
             "header"
             "imagenes_Menu"
@@ -510,35 +843,33 @@ tr:nth-child(even) {
             "Footer"
         ;
     }
-    .container{
-        width: 500px;
-    }
-    .logoRedes{
-        width: 40px
-    }
-    table {
-        width: 40%;
-    }
-    .accordion-color{
-        background-color: #5D576B;
-        color: white;
-    }  
-    .Content_MainText{
-        margin-top: 2rem;
-        width: auto;
-        font-size: 90%;
-        text-align: center;
-    }
+   
     .container_Boximages{
         width: auto;
         height: auto;
-        margin-bottom: 4rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
         margin-left: 0rem;
         margin-right: 0rem;
+        padding: 0.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-size: large;
+    }
+    .Header_boxeo{
+        margin-bottom: 3rem;
+    }
+    .content_SubTitulo-Motivacion{
+        display: flex;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+  
+    .imagen_Seccion-description{
+        width: auto;
+        margin: 1rem;
+        align-self: center;
     }
     .container_Boximages-subContainer{
         width: 20rem;
@@ -552,47 +883,66 @@ tr:nth-child(even) {
         display: flex;
         flex-direction: column;
     }
-    .navMenu{
-        width: 50%;
-        margin-right: auto;
-    }
     .motivacion_container{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        height: 90%;
-        width: auto;height: 15rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        height: auto;
+        width: auto;
         
     }
-    .content_SubTitulo-Motivacion{
-        display: flex;
-        font-size: 3rem;
-    }
-  
-    .imagen_Seccion-description{
+     /*CIERRA edicion de Mensaje motivacion de pagina BOXEO*/
+    
+     /*Responsividad Pagina MUSCULACION*/
+    .container_Musculacion_textoIzquierda{
+        background-color: #2e4442;
+        margin: 0;
+        margin-top: 10rem;
         width: auto;
-        margin: 1rem;
-        align-self: center;
+        justify-self: center;
     }
-    .menuinicio{
-        display: flex;
+    .container_Musculacion{
+        flex-direction: column;  
+    }
+    .Content_Musculacion_MainText{
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .container_Musculacion-galeria{
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    .container_Musculacion-galeria img{
+        width: 70%;
+       
+    }
+    .container_Musculacion_textoIzquierda h5{
+        margin-left: 2rem;
+        font-size: 2rem;
+    }
+    .motivacion_container h3{
+        margin-left: 3rem;
+    }
+     /*CIERRA Responsividad Pagina MUSCULACION*/
+    /*Responsividad Pagina GALERIA*/
+    .Galeria_imagenes-contenedor img{
+        width: 70%;
+    }
+    .Galeria_imagenes{
+        margin-top: 60rem;
         flex-direction: column;
     }
-    .ul_Botones{
-        background: transparent;
-        width: 50%;
-        margin: 0;
-        padding-left:  0;
-        margin-bottom: 3rem;
+    /*CIERRA Responsividad Pagina GALERIA*/ 
+
+    /*Responsividad Pagina CONTACTO*/
+    .Header_contactanos{
+        height: 1200px;
     }
-    .ul_Botones a{ 
-        align-items: start;
-        font-size: 70%;
-        border-radius: 5px;
-        background-color:rgba(0, 0, 0, 0.5);
+    .container_contactanos{
+        margin: 0px;
     }
-    footer{
-        width: auto;
-    }
+   /*CIERRA Responsividad Pagina CONTACTO*/
 }
 
 
@@ -606,3 +956,5 @@ tr:nth-child(even) {
         transform: translateY(0);
     }
 }
+
+
