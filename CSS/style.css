@@ -82,11 +82,12 @@ header{
 .content_SubTitulo-Estudiantes{
     display: flex;
     flex-direction: column;
+    text-align: center;
     color: #ED6A5A;
     font-size: 4rem;
 }
 .content_SubTitulo-Estudiantes p{
-    display: flex;
+    text-align: center;
     font-size: 3.5rem;
     color: #ffffff;
 }
