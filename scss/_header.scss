@@ -1,0 +1,82 @@
+@import "var";
+header {
+    height: 1000px;
+    margin-bottom: 5rem;
+    grid-area: header;
+    /*ARRANCA CSS HEADER*/
+    .header_imagenes {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .header_menuinicio {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header_textoinicio {
+        text-align: center;
+        color: white;
+        padding: 2rem;
+        background-color: #00000081;
+    }
+    .header_navMenu {
+        display: flex;
+        align-items: start;
+    }
+    .header_logoPequeño {
+        margin: 3rem;
+        width: 200px;
+        border: solid;
+        text-align: start;
+    }
+    .header_ul_botones {
+        margin: 3rem;
+
+    }
+    .header_ul_botones li {
+        background: rgba(0, 0, 0, 0.555);
+        margin: 2rem;
+        padding: 0.1rem;
+        display: inline;
+        font-size: 22px;
+    }
+    
+    .header_ul_botones li a {
+        transition: border-color 2s, color 0.3s;
+        color: rgb(235, 232, 232);
+    }
+    .header_ul_botones li a:hover {
+        color: $titleColor;
+        border-radius: 10%;
+        background: #27262642;
+        transform: scale(1.05);
+    }
+
+}
+.header_index{
+background-image: url("../Assets/Imgs/FotoBoxeoFondo.svg");
+height: 700px;
+}
+.header_boxeo{
+    background-image: url("../Assets/Imgs/FondoBoxeo.svg");
+    height: 700px;
+}
+.header_galeria{
+    background-image: url("../Assets/Imgs/fondoGaleria.svg");
+    height: 900px;
+}
+.header_contact{
+    background-image: url("../Assets/Imgs/fontoContactanos.svg");
+    height: 1200px;
+}
+.header_musculacion{
+    background-image: url("../Assets/Imgs/fotofondoGimnasio.svg");
+    height: 700px;
+}
+.header_background , .header_index, .header_boxeo{
+    background-size:cover; 
+    background-position:center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 0px 30px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
+}

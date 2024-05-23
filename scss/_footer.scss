@@ -1,0 +1,79 @@
+@import "var";
+footer{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e5553; 
+    border-top: solid #774446;
+    margin-top: 7rem;
+    grid-area: Footer;
+    -webkit-box-shadow: 2px -3px 30px 10px #774446;
+    -moz-box-shadow: 2px -3px 30px 10px #774446;
+    box-shadow: 2px -3px 30px 10px #774446;
+}
+.footer_logoredes{
+    transition: border-color 0.3s, color 0.3s;
+    transition: transform 0.4s ease;
+    width: 40px
+}
+.footer_logoredes:hover{
+    transition: border-color 0.3s, color 0.3s;
+    transform: scale(1.1);
+}
+.footer_text{
+    
+    display: flex;
+    flex-direction: column;
+}
+footer p{
+    color: #F0F2F4;
+    text-align: center;
+    padding: 0.2rem;
+    background: #2e4442;
+    transition: transform 0.2s ease;
+}
+footer p:hover{
+    transform: scale(1.15);
+}
+.footer_logo{
+    width: 150px;
+    transition: transform 0.4s ease;
+    border: solid #260000;
+    border-radius: 25%;
+}
+footer img{
+    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 2px -3px 10px 10px #00000000;
+    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0);
+}
+.footer_logo:hover{
+    transform: scale(1.32);
+}
+
+.botonIrHaciaArriba img{
+    position: fixed;
+    width: 50px;
+    opacity: 0.2;
+    transition: transform 0.3s ease;
+    animation: none;
+    bottom: 10px;
+    right: 10px;
+    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 2px -3px 20px 10px #00000000;
+    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0);
+}
+.botonIrHaciaArriba img:hover{
+    opacity: 1.0;
+    transform: scale(1.1);
+    animation-name: movBotonIrArriba;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes movBotonIrArriba {
+    0%   {right:10px; bottom:10px;}
+    25%  {right:10px; bottom:14px;}
+    50%  {right:10px; bottom:16px;}
+    75%  {right:10px; bottom:14px;}
+    100% {right:10px; bottom:10px;}
+  }
