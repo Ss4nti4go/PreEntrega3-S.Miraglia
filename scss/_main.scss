@@ -1,111 +1,74 @@
-.content_subtitulo{
+//Edicion de títulos y texto
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+body {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.content_beneficios-section p {
+    color: #afabab;
+}
+.content_textobeneficios {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 4rem;
-    color: #ED6A5A;
+    justify-content: space-evenly;
 }
-.content_subtitulo-beneficios{
-    font-size: 6rem;
-    text-align: center;
+h2,h3{
     display: flex;
-    flex-direction: column;
-}
-.content_subtitulo-beneficios p{
-    color: #ED6A5A;
-}
-.content_subtitulo-estudiantes{
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    color: #ED6A5A;
-    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    text-wrap: nowrap;
+    color: $colorNaranjaRojizo;
+    font-size: 6vh;
+    p {
+        color: black;
+    }
 }
-.content_subtitulo-estudiantes p{
-    text-align: center;
-    font-size: 3.5rem;
+h2 {
+ 
+}
+
+.content_subtitulo-beneficios {
     color: #ffffff;
+
 }
-.content_subtitulo-musculacion{
-    display: flex;
-    flex-direction: column;
-    color: #ED6A5A;
-    font-size: 2.5rem;
+
+.content_subtitulo-beneficios p {
+    color: $colorNaranjaRojizo;
 }
-.estudiante_nombre{
-    font-size: 1rem;
-    color: white;
+
+
+//Cierra edicion de títulos y texto
+//HOVERS
+.content_beneficios-section:hover {
+    transform: scale(1.12);
 }
-.content_subtitulo-motivacion{
-    display: flex;
-    color: #ffffff;
-    font-size: 6rem;
+
+.container_boximages img:hover {
+    transform: scale(1.05);
 }
-.content_subtitulo-motivacion p{
-    font-size: 6rem;
-    color: #ED6A5A;
+
+.btn-primary:hover {
+    background-color: #397a3c;
 }
-.container_musculacion h5{
-    display: flex;
-    justify-content: center;
-    font-size: 3.5rem;
-    color: #ED6A5A;
+
+img {
+    transition: transform 0.4s ease;
 }
-.container_musculacion_textoizquierda p{
-    color: white;
+
+img:hover {
+    transform: scale(1.05);
 }
-.container_Musculacion_textoizquierda_text{
-    margin: 2rem;
-    background-color: #3e5553;
-    transition: transform 0.3s ease;
-    -webkit-box-shadow: 0px 0px 15px 4px rgba(78,102,100,0.57);
-    -moz-box-shadow: 0px 0px 15px 4px #4e666491;
-    box-shadow: 0px 0px 15px 4px rgba(78,102,100,0.57);
-    padding: 1rem;
-}
-.container_Musculacion_textoizquierda_text:hover{
-    transform: scale(1.1);
-}
-.content_subtitulo-imagenesmusculacion{
-    text-align: center;
-    font-size: 3.5rem;
-    color: black;
-}
-.content_subtitulo-imagenesMusculacion p{
-    font-size: 3.5rem;
-    color: #ED6A5A;
-}
-.container_musculacion_textoizquierda{
-    background-color: #2e4442;
-    margin-right: 10rem;
-    width: 35rem;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    -webkit-box-shadow: 5px -3px 20px 4px rgba(78,102,100,0.57);
-    -moz-box-shadow: 5px -3px 20px 4px #4e666491;
-    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
-    
-}
-.container_musculacion-galeria{
-    display: flex;
-    justify-content: center;
-}
-.container_musculacion-galeria img{
-    margin: 4rem;
-    transition: transform 0.2s ease;
-}
-.container_musculacion-galeria img:hover{
-    transform: scale(1.1);
-    
-}
+
+//CIERRA HOVERS
+
 /*GRID INDEX: Asi se organizará la informacion de la pagina boxeo de 1200px de ancho en adelante*/
-.container1{
+.container_main {
     margin-top: 20rem;
     display: grid;
-    grid-template-columns: 3fr 2fr; 
-    grid-template-rows: auto auto auto; 
-    grid-auto-columns: 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-auto-columns: auto auto auto;
     gap: 5px 5px;
     grid-template-areas:
         "header header"
@@ -115,313 +78,545 @@
         "acordion acordion"
         "footer footer"
     ;
+
+    .content_maintextindex {
+        width: 50vh;
+        display: flex;
+        height: auto;
+        margin-top: 5rem;
+        padding: 1rem;
+        flex-direction: column;
+        justify-self: center;
+        grid-area: main-text;
+        -webkit-box-shadow: $sombraGrisDos;
+        -moz-box-shadow: $sombraGrisDos;
+        box-shadow: $sombraGrisDos;
+
+        p {
+            text-align: center;
+        }
+    }
+    .content_beneficios {
+        margin-top: 15rem;
+        margin-bottom: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $colorAzulOscuro;
+        width: auto;
+        color: white;
+        grid-area: beneficios;
+        height: 30rem;
+        -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 2px -3px 20px 10px #00000091;
+        box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
+    }
+    
+    .content_horarios {
+        display: flex;
+        flex-direction: column;
+        grid-area: horarios;
+    
+        .horarios {
+            margin: 2rem;
+            padding: 15px;
+        }
+    
+        td {
+    
+            border-bottom: #cfc4c4 solid 1px;
+            text-align: left;
+            transition: transform 0.2s ease-in;
+    
+            .table-subtitle {
+                color: #d1a666;
+            }
+        }
+    
+        td:hover {
+            transform: scale(1.02);
+    
+            .table-subtitle {
+                color: $colorAmarilloClaro;
+            }
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    
+        .content_subtitulo-horarios {
+            font-family: "Montserrat", sans-serif;
+            display: flex;
+            flex-direction: row;
+            font-weight: 600;
+            font-size: 7vh;
+        }
+    }
 }
+
 /*GRID BOXEO: Asi se organizará la informacion de la pagina boxeo de 1200px de ancho en adelante*/
-.gridboxeo-container{
-    margin-top: 3rem;
+.gridboxeo-container {
+    margin-top: 20rem;
     display: grid;
-    grid-template-columns: 3fr 2fr; 
-    grid-template-rows: auto auto auto; 
-    grid-auto-columns: 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
     gap: 5px 5px;
     grid-template-areas:
         "header header"
         "imagenes_menu imagenes_menu"
         "main-text box_imagenes"
         "motivacion motivacion"
+        "main-stuff main-stuff"
         "footer footer"
     ;
+
+    .content_maintext {
+        width: 60vh;
+        display: flex;
+        height: auto;
+        margin-top: 5rem;
+        padding: 1rem;
+        flex-direction: column;
+        justify-self: center;
+        grid-area: main-text;
+        box-shadow: none;
+
+        p {
+            text-align: center;
+        }
+
+        h2 {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            color: #000000;
+            font-size: 6vh;
+
+            p {
+                color: $colorNaranjaRojizo;
+                font-size: 7vh;
+            }
+        }
+
+        h4 {
+            font-family: Roboto, sans-serif;
+        }
+    }
+
+    .content_stuff {
+        font-size: 2vh;
+        display: flex;
+        justify-self: center;
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        grid-area: main-stuff;
+
+        div h5 {
+            margin: 1rem;
+            font-size: 1.5vh;
+            color: $colorAmarilloClaro;
+            text-align: left;
+        }
+
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            color: #2e4442;
+            text-align: left;
+        }
+
+        .content_stuff-text {
+            height: 10vh;
+            width: 50vh;
+
+            p {
+
+                text-wrap: wrap;
+                font-family: "Montserrat", sans-serif;
+                text-align: center;
+            }
+        }
+
+        div img {
+            margin: 0rem 0rem 0rem 8rem;
+            width: 30vh;
+            box-shadow: none;
+            border-bottom: #b4afaf 1px solid;
+        }
+    }
 }
-.motivacion_container{
-    margin-top: 5rem;
-    margin-bottom: 15rem;
-    display: flex;
-    flex-direction: column;
+
+.container_musculacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px 5px;
+    grid-template-areas:
+        "header header"
+        "imagenes_menu imagenes_menu"
+        "main-text main-text"
+        "motivacion motivacion"
+        "main-secondtext content_secondtext"
+        "footer footer"
+    ;
+    justify-content: center;
+    margin-top: 20rem;
+
+    .content_maintext {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 0rem 0rem 0rem 5rem;
+        padding: 1rem;
+        grid-area: main-text;
+        box-shadow: none;
+        text-align: start;
+
+        section {
+            margin-top: 4rem;
+            text-align: center;
+            div {
+                width: fit-content;
+                height: fit-content;
+                display: inline;
+               
+                width: 30vh;
+
+                img {
+                    width: 30vh;
+                    margin: 1rem;
+                }
+            }
+
+        }
+
+        h2 {
+            display: flex;
+            font-family: "Montserrat", sans-serif;
+            color: #000000;
+            font-size: 6vh;
+
+            p {
+                color: $colorNaranjaRojizo;
+                font-size: 7vh;
+            }
+        }
+
+        h3 {
+            display: flex;
+            font-family: "Montserrat", sans-serif;
+            color: $colorAzulOscuro;
+            font-weight: 950;
+            font-size: 4vh;
+
+            p {
+                color: $colorNaranjaRojizo;
+                font-size: 6vh;
+            }
+        }
+        h4 {
+            font-family: Roboto, sans-serif;
+            text-align: start;
+            font-size: 3vh;
+        }
+    }
+
+    .content_secondtext {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 1rem;
+        margin: auto;
+        grid-area: main-secondtext;
+        box-shadow: none;
+        article{
+
+            margin: auto;
+        }
+
+        p {
+            text-align: center;
+        }
+        h4 {
+            font-family: Roboto, sans-serif;
+        }
+
+        section {
+            height: auto;
+            width: auto;
+            justify-content: center;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0.2rem;
+            background: linear-gradient(135deg, $colorGrisAzulado, $colorVerdeGrisaceo);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px $box-shadow-color;
+            h2 {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                font-family: "Montserrat", sans-serif;
+                color: #000000;
+                font-size: 6vh;
+    
+                p {
+                    color: $colorNaranjaRojizo;
+                    font-size: 7vh;
+                }
+            }    
+            .card-texto {
+                background: #f0f0f0;
+                padding: 3px;
+                margin: 0rem;
+                height: 20vh;
+                width: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px $box-shadow-color;
+                transition: transform 0.3s, box-shadow 0.3s;
+                overflow: hidden;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $sombraAzulOscuro;
+                    z-index: 0;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+
+                &:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+                    &:before {
+                        opacity: 0.1;
+                    }
+                }
+
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    color: $colorTexto;
+                    font-size: 4vh;
+                    font-weight: 300px;
+                    font-family: "Montserrat", sans-serif;
+                    position: relative;
+                    z-index: 1;
+                    p{
+                        margin-left: 10px;
+                        color: $colorNaranjaRojizo;
+                    }
+                }
+
+                p {
+                    color: darken($colorTexto, 20%);
+                    line-height: 1.5;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+
+}
+
+.motivacion_container {
+    position: relative;
+    width: 100%; 
+    height: auto;
     align-items: center;
     justify-content: center;
-    background: #77928f;
-    width: auto;
-    color: #ED6A5A;
+    margin: 10rem 0rem 10rem 0rem;
+    height: 25rem;
+    background-color: $colorAzulOscuro;
     grid-area: motivacion;
-    height: 30rem;
-    -webkit-box-shadow: 5px -3px 20px 4px #9BC1BC;
-    -moz-box-shadow: 5px -3px 20px 4px #9BC1BC;
-    box-shadow: 5px -3px 20px 4px #9BC1BC;
+    .motivacion_container-boxeo{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        text-align: center;
+        h2 {
+            color: $colorAmarilloClaro;
+            p {
+    
+                color: #ff9a76;
+            }
+        }
+    }
+    .motivacion-container-musculacion{
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        text-align: center;
+        h2 {
+            color: #ffffff;
+            p {
+    
+                color: #ff9a76;
+            }
+        }
+     
+    }   
+    img {
+        display: block;
+        transition: none;
+        transform: none;
+        width: 100%;
+        height: auto;
+    }
+    .content_subtitulo-motivacion{
+        width: auto; 
+        position: absolute;
+        text-align: start;
+        top:0;
+    }
 }
-/*
-.content_Beneficios-section{
-    background: #2e4442;
+.content_beneficios-section {
     grid-area: beneficios;
     padding: 0.3rem;
     margin: 1.6rem;
     display: flex;
     flex-direction: column;
     transition: transform 0.4s ease;
-    -webkit-box-shadow: 5px -3px 10px 4px rgba(78,102,100,0.57);
-    -moz-box-shadow: 5px -3px 10px 4px #4e666491;
-    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
-}*/
+    border-left: $colorGrisAzulado 1px solid;
+    border-right: $colorGrisAzulado 1px solid;
+}
+
 /*Contendor de imagenes en pagina BOXEO*/
-.container_Boximages{
-    background: #2e4442;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-    margin-top: 15rem;
-    margin-left: 10rem;
-    margin-right: 2rem;
-    margin-bottom: 5rem;
+.container_boximages {
+    padding: 3rem 1rem 3rem 3rem;
+    margin: auto;
     grid-area: box_imagenes;
-    height: auto;
-    width:31rem;
+    width: 70vh;
     display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    color: #ED6A5A;
-    -webkit-box-shadow: 5px -3px 10px 4px rgba(78,102,100,0.57);
-    -moz-box-shadow: 5px -3px 10px 4px #4e666491;
-    box-shadow: 5px -3px 5px 4px rgba(78,102,100,0.57);
+    div{
+        margin-left: 5rem;
+        img{
+            width: 50vh;
+        }
+    }
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        color: #2e4442;
+        text-align: left;
+
+        p {
+            color: $colorNaranjaRojizo;
+            font-size: 8vh;
+        }
+    }
+
 }
 
-.container_boximages img{
-    margin: 1.5rem;
-    width: 300px;
-    transition: transform 0.4s ease;
-    -webkit-box-shadow: $sombraGris;
-    -moz-box-shadow: $sombraGris;
-    box-shadow: $sombraGris;
-}
-.container_boximages img:hover{
-    transform: scale(1.05);
-}
+
 /*CIERRA Contendor de imagenes en pagina BOXEO*/
-.header_imagenes{
-    grid-area: imagenes_menu ;
-}
-.content_beneficios-section:hover{
-    transform: scale(1.12);
-}
-/*Contendor de Beneficios, acordion y tabla de horarios en pagina INDEX*/
-.content_beneficios{
-    margin-top: 15rem;
-    margin-bottom: 15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #283b39;
-    width: auto;
-    color: white;
-    grid-area: beneficios;
-    height: 30rem;
-    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 2px -3px 20px 10px #00000091;
-    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
-}
-.content_horarios{
-    display: flex;
-    flex-direction: column;
-    grid-area: horarios;
-}
-.custom-accordion-button {
-    background-color: #f8f9fa; /* Cambia el color de fondo del botón del acordeón */
-    color: #007bff; /* Cambia el color del texto del botón del acordeón */
-    border: 1px solid #ced4da; /* Cambia el borde del botón del acordeón */
+.header_imagenes {
+    grid-area: imagenes_menu;
 }
 
-.custom-accordion-body {
-    background-color: #f8f9fa; /* Cambia el color de fondo del cuerpo del acordeón */
-    color: #343a40; /* Cambia el color del texto del cuerpo del acordeón */
-}
-.accordion{
+/*Contendor de Beneficios, acordion y tabla de horarios en pagina INDEX*/
+
+
+/*CIERRA Contendor de Beneficios y tabla de horarios en pagina INDEX*/
+//acordion
+.accordion {
     grid-area: acordion;
     justify-content: center;
+    width: auto;
     margin: 4rem;
     margin-bottom: 6rem;
     -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
     -moz-box-shadow: 2px -3px 20px 10px #00000091;
     box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
-}
-/*CIERRA Contendor de Beneficios y tabla de horarios en pagina INDEX*/
-.container_musculacion{
-    justify-content: center;
-    margin-top: 40rem;
-    display: flex;
-}
-.content_maintext{
-    display: flex;
-    margin-top: 5rem;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    font-size: larger;
-    height: auto;
-    grid-area: main-text;
-}
-
-.content_maintext section{
-    text-align: center;
-    width: 500px;
-    padding: 2rem;
-    -webkit-box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 2px -3px 20px 10px #00000091;
-    box-shadow: 2px -3px 20px 10px rgba(0, 0, 0, 0.57);
-}
-
-/*Colores*/
-.Big-Machine-1-hex { color: #5D576B; }
-.Big-Machine-2-hex { color: #9BC1BC; }
-.Big-Machine-3-hex { color: #F4F1BB; }
-.Big-Machine-4-hex { color: #260000; }
-.Big-Machine-5-hex { color: #a0a59b; }
-.Big-Machine-1-hex { color: #ED6A5A; } 
-.img_animacion:hover{
-    opacity: 1.0;
-  
-}
-.imagen_seccion{
-    max-width: 600px;
-}
-.imagen_seccion-description{
-    display: flex;
-    text-align: center;
-    width: 22rem;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border-bottom: black 1px solid;
-}
-.imagen_seccion img{
-    width: 350px;
-}
-img{
-    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
-}
-.imagen_seccion h6{
-    margin-top: 15rem;
-    height: 100px;
-    font-size: 2rem;
-    text-align: center;
-    background-color:rgb(24, 46, 75)  ;
-    display: flex;
-    flex-direction: column-reverse;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-    animation: fadeIn 1s ease-in-out;
-}
-.imagen_seccion h6:hover{
-    background: #ED6A5A;
-}
-a{
-    text-decoration: none;
-}
-.content_table_style{
-    margin: 50px auto;
-    width: 60%;
-    border: #260000;
-    -webkit-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px -3px 10px 10px rgba(0, 0, 0, 0.5);
+    fieldset {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 0px;
+    }
     
-}
-.horarios { 
-    background-color: #fff;
-    margin: 2rem;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.content_subtitulo-horarios{
-    font-size: 6rem;
-    text-align: center;
-}
-.content_textobeneficios{
-    display: flex;
-    justify-content: space-evenly;
-}
-.content_beneficios h4{
-    color: #ED6A5A;
-}
-h2 {
-    text-align: center;
+    .accordion-header {
+        color: $colorVerdeGrisaceo;
+        border: 1px solid #ced4da;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    button {
+        background-color: #343a40;
+        color: white;
+        border: 1px solid #ced4da;
+    }
+
+    .custom-accordion-body {
+        background-color: #f8f9fa;
+        color: #343a40;
+    }
 }
 
-td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-    transition: transform 0.2s ease-in;
-}
+//cierra acorcion
 
-th {
-    background-color: #f2f2f2;
-    
-}
-td:hover{
-    transform: scale(1.12);
 
-}
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-.galeria_imagenes{
-    justify-content: center;
-    display: flex;
-    width: auto;
-    padding: 2rem;
-    margin-top: 40rem;
-    background-color: #b0b4abcb;
-    -webkit-box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 2px -3px 30px 10px rgba(0, 0, 0, 0.5);
-}
-.galeria_imagenes img{
-    width: 80%;
-    margin: 2rem;
-    transition: transform 0.2s ease-out;
-}
-.galeria_imagenes img:hover{
-    transform: scale(1.05);
-}
-.galeria_imagenes-contenedor{
-    padding: 2rem;
-    background-color: #a3a89e;
-}
-.container_contactanos{
-    display: flex;
-    justify-content: center;
-}
-
-fieldset{
-    color: #36A0FF;
-    font-size: 27px;
-    padding: 10px;
-}
 .container_contactanos-form {
     margin-top: 3rem;
-    display: flex;
     padding: 30px;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
+.container_contact-boostrap {
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    .row-sm{
+        text-align: center;
+    }
+    div h3 {
+        margin: 0rem;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.692)
+    }
 
+    input[type="text"],
+    textarea {
+        transition: border-color 0.3s ease-in-out;
+    }
 
-
-.form-control {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 15px;
-    transition: border-color 0.3s ease-in-out;
+    input[type="text"]:focus,
+    textarea:focus {
+        border-color: #4CAF50;
+    }
+    .container_contactanos {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 15px;
+        transition: border-color 0.3s ease-in-out;
+    }
+    
 }
 .btn-primary {
     background-color: #4CAF50;
@@ -436,32 +631,745 @@ fieldset{
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
+// cartas Tienda
+.card-container {
+    margin: 30rem 0rem 10rem 0rem;
+    height: 100%;
+    width: 100%;
+    padding: 5rem;
+    background-color: #2a2a2a;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    place-items: center;
+    box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
 
-.btn-primary:hover {
-    background-color: #397a3c;
-}
+    .container {
+        p{
+            font-size: 2vh;
+            margin-top: 2rem;
+            font-weight: 100;
+            font-family: "Montserrat", sans-serif;
+        }
+        h3{
+            font-size: 4vh;
+            margin-top: 2rem;
+            font-weight: 300;
+            font-family: "Montserrat", sans-serif;
+            align-content: center;
+            text-wrap: wrap;
+        } 
+        .card-content{
+            p{
+                font-size: 3vh;
+                margin-top: 2rem;
+                font-weight: 600;
+                font-family: "Montserrat", sans-serif;
+            }
+            a{
+                font-size: 3vh;
+                margin-top: 2rem;
+                font-weight: 300;
+                font-family: "Montserrat", sans-serif;
+                align-content: center;
+            } 
+        }
+  
+        margin: 1rem;
+        min-width: 400px;
+        min-height: 500px;
+        border-radius: 20px;
+        position: relative;
+        transition: transform 1s ease-in-out;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.774);
+        &:hover {
+            transform: rotateY(180deg);
+        }
+    
+        .side {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px 50px;
+            color: #fff;
+            backface-visibility: hidden;
+            border-radius: 20px;
+        }
+    
+        .front {
+            background: #1e1e1e;
+            z-index: 2;
+        }
+    
+        .back {
+            background: #333;
+            transform: rotateY(180deg);
+            z-index: 0;
+        }
+    
+        .content,
+        .content1 {
+            transform: translateZ(70px) scale(0.8);
+            line-height: 1.5em;
+        }
+    
+        .content h3 {
+            margin: 0;
+            font-size: 2rem;
+        }
+    
+        .content p {
+            margin-top: 50px;
+            line-height: 2em;
+        }
+    
+        .content h3:before {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            height: 5px;
+            background-color: #3e3;
+            width: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .btn {
+            background-color: #3e3;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    
+        .btn:hover {
+            background-color: #2e2;
+            transform: scale(1.05);
+        }
+    
+        .slider {
+            width: 310px;
+            height: 300px;
+            background-color: #222;
+            margin: 0.5rem 0 2rem 0;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            .slide {
+                margin: 0;
+                padding: 0;
+                flex: 0 0 370px;
+            }
+            .image-container {
+                width: 1500px;
+                height: 300px;
+                display: flex;
+                transition: transform 0.5s ease;
+                img {
+                    width: 370px;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            
+            }
+            #slide-1:target~.image-container {
+                transform: translateX(0);
+    
+            }
+            #slide-2:target~.image-container {
+                transform: translateX(-370px);
+            }
+    
+            #slide-3:target~.image-container {
+                transform: translateX(-740px);
+            }
+            .buttons {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 10px;
+        
+                a {
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background-color: #3e3;
+                    transition: background-color 0.3s;
+                }
+                        
+                a:hover {
+                    background-color: #8f8989;
+                }
+    
+                a:active {
+                    background-color: #ffffff;
+                }
+            }    
+        }
+    }
 
-.container_contactanos-form input[type="text"],
-.container_contactanos-form textarea {
-    transition: border-color 0.3s ease-in-out;
+   
 }
+//cierra CARTAS Tienda
+@media (max-width: 1340px) {
+    .container_main {
+        
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px 5px;
+        grid-template-areas:
+            "header"
+            "main-text"
+            "horarios"
+            "beneficios"
+            "acordion"
+            "footer"
+        ;
+        .content_maintextindex {
+            max-width: 30vh;
+            height: auto;
+            margin: auto;
+            padding: 1rem;
+            p {
+                text-align: center;
+            }
+        }
+        .content_beneficios{
+            display: flex;
+            flex-direction: column;
+        }
+        .content_horarios {
+            margin-top: 3rem;
+            .horarios {
+                margin: auto;
+                padding: 15px;
+            }
+            td {
+                text-align: center;
+            }
+                h4{
+                    justify-content: center;
+            
+                }
+        }
+    }
+    .gridboxeo-container {
+        margin-top: 20rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px 5px;
+        grid-template-areas:
+            "header"
+            "imagenes_menu"
+            "main-text"
+            "box_imagenes "
+            "motivacion"
+            "main-stuff"
+            "footer"
+        ;
+        
+        .content_stuff {
+            margin: 5rem;
+            display: flex;
+            justify-self: start;
+        }
+        .container_boximages{
+            margin: 0rem;
+            justify-self: center;
+        }
+    }
+    .container_musculacion{
+        .content_maintext{
+            margin-left: 0.2rem;
+            padding: 0rem;
+            justify-content: center;
+            text-align: center;
+            article{
+                justify-content: center;
+                justify-self: center;
+                align-items: center;
+                margin-left: 3rem;
+                margin-right: 2rem;
+                text-align: center;
+                width: 54vh;
+                height: 45vh;
+            }
+        }
+        .content_secondtext{
+            justify-content: space-around;
+            padding: 0rem;
+            margin: 0rem;
+            section{
+                margin: 0rem;
+            }
+            div{
+                margin: 0rem 1rem 0rem 0rem;
+            }
+        }
+    
+    }
+    
+    .card-container {
+        margin: 20rem 0rem 10rem 0rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        .card-content{
+            align-items: center;
+           
+        }
+        .btn-primary{
+            align-items: center;
+            width: 20vh;
+            height: 8vh;
+        }
+    }
+}
+@media (max-width: 1080px) {
+    .container_main {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        grid-template-areas:
+            "header"
+            "main-text"
+            "horarios"
+            "beneficios"
+            "acordion"
+            "footer"
+        ;
+        .content_maintextindex {
+            width: auto;
+            height: auto;
+            display: flex;
+            margin-top: 5rem;
+            padding: 0rem;
+            flex-direction: column;
+            justify-self: center;
+            p {
+                text-align: center;
+            }
+        }
+        .content_beneficios {
+            height: auto;
+            margin-top: 5rem;
+            margin-bottom: 15rem;
+        }
+        .content_textobeneficios{
+            display: flex;
+            flex-direction: column;
+        }
 
-.container_contactanos-form input[type="text"]:focus,
-.container_contactanos-form textarea:focus {
-    border-color: #4CAF50;
-}
-.container_contact-boostrap{
-    margin-top: 0.5rem;
-    margin-bottom: 2rem;
-}
-.container_contact-boostrap h2{
-    margin: 0.3rem;
-    color: rgb(0, 0, 0);
-    background: rgba(228, 228, 228, 0.692);
-}
-.container_contact-boostrap h3{
-    margin: 0rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background: rgba(0, 0, 0, 0.692)
+        .content_horarios {
+            text-align: center;
+            margin-top: 3rem;
+            .horarios {
+                margin: 2rem;
+                padding: 15px;
+            }
+            td {
+                text-align: center;
+            }  
+            h4{
+                display: inline-block;
+            }
+        }
+    }
+    .motivacion_container {
+        margin: 8rem 0rem 5rem 0rem;
+        height: 25rem;
+        div {
+            position: absolute;
+            top: 15%;
+            left: 1%;
+            margin-bottom: 3rem;
+            h2 { 
+                text-wrap: wrap;
+                font-size: 32px;
+                align-items: center;
+                p {
+                 
+                    font-size:32px;
+                }
+            }
+
+        }
+    }
+    .gridboxeo-container {
+        margin-top: 20rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px 5px;
+        grid-template-areas:
+            "header"
+            "imagenes_menu"
+            "main-text"
+            "box_imagenes "
+            "motivacion"
+            "main-stuff"
+            "footer"
+        ;
+        .content_maintext{
+            *{
+                font-size: 80%;
+            }
+            margin-top: 10rem;
+            padding: 0rem;
+            width: 40vh;
+                h2{
+                    font-size: 3vh;
+                    text-wrap: wrap;
+                    p{
+                        font-size: 3vh;
+                    }
+                }
+                h4{
+                    font-size: 2vh;
+                }
+                h3{
+                    font-size: 1vh;
+                }
+        }
+        .content_stuff {
+            *{
+                font-size: 96%;
+            }
+            h2{
+                text-align: center;
+                font-size: 200%;
+            }
+            text-align: center;
+            width:auto;
+            .content_stuff-text{
+                margin-left: 0.3rem;
+                width: 75%;
+                max-width: 480px;
+                margin-bottom: 5rem;
+            }
+            margin: auto;
+            height: 100%;
+            padding: 0rem;
+            display: flex;
+            flex-direction: column;
+            justify-self: start;
+            div img{
+                width: 50%;
+            }
+        }
+        .container_boximages{
+            width: 80%;
+            margin: 0rem;
+            padding: 0rem;
+            justify-self: center;
+            div {
+                margin: 0rem;
+                h2{
+                    font-size: 3vh;
+                }
+                img{
+                    margin: 0rem;
+                    width: 70%;
+                }
+            
+            }
+           
+        }
+    }
+    .container_musculacion {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto ;
+        gap: 0px;
+        grid-template-areas:
+            "header"
+            "imagenes_menu"
+            "main-text"
+            "motivacion"
+            "main-secondtext"
+            "footer"
+        ;
+        text-align: center;
+        justify-content: center;
+        margin-top: 53rem;
+        
+        .content_maintext {
+            flex-direction: column;
+            max-width: 600px;
+            max-height: 1000px;
+            margin: auto;
+            margin-top: 10rem;
+            margin-bottom: 12rem;
+            padding: 0rem;
+            justify-content: center;
+            text-align: center;
+            article{
+                margin: auto;
+              
+                text-align: center;
+                width: auto;
+                height: 120%;
+            }
+            section {
+                div{
+                     justify-content: space-around;
+                     align-items: center;
+                     place-items: center;
+                }
+                margin-top: 2rem;
+                margin-bottom: 4rem;
+                padding: 0rem;
+              
+            }
+    
+            h2 {
+                font-size: 3vh;
+                p {
+                    font-size: 3.5vh;
+                }
+            }
+            h3 {
+                font-size: 2.45vh;
+    
+                p {
+                    font-size: 3vh;
+                }
+            }
+            h4 {
+                text-align: center;
+                font-size: 2vh;
+            }
+        }
+        
+        .content_secondtext{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        
+            section{
+                transform: scale(0.9);
+                margin: auto;
+                justify-content: center;
+                div{
+                    margin: auto;   
+                    min-height: 0rem;
+                    min-width: 0rem;
+                 
+                }
+                gap: 10px;
+                .card-texto{
+                    h3{font-size: 3vh;}
+                    padding: 0.1rem;
+                    font-size: 1.5vh;
+                }
+            }
+            article{
+                div {
+                    width: 15rem;
+                }
+                h3{
+                    font-size: 45px;
+                    color:black;
+                    p{
+                        color: $colorNaranjaRojizo;
+                    }
+                }
+            }
+            .disciplinas{
+                margin:auto;
+            }
+        }
+    }
+    .card-container {
+        margin: 40rem 0rem 5rem 0rem;
+        height: 100%;
+        width: 100%;
+        padding: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        .container {
+            margin: 1rem;
+            min-width: 300px;  /* Reducido desde 400px */
+            min-height: 400px;  /* Reducido desde 500px */
+            border-radius: 20px;
+            position: relative;
+            transition: transform 1s ease-in-out;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.774);
+            &:hover {
+                transform: rotateY(180deg);
+            }
+        
+            .side {
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                padding: 10px 20px;  /* Reducido el padding */
+                color: #fff;
+                backface-visibility: hidden;
+                border-radius: 20px;
+            }
+        
+            .front {
+                background: #1e1e1e;
+                z-index: 2;
+            }
+        
+            .back {
+                background: #333;
+                transform: rotateY(180deg);
+                z-index: 0;
+            }
+        
+            .content,
+            .content1 {
+                transform: translateZ(50px) scale(0.7);  /* Reducido desde 70px */
+                line-height: 1.5em;
+            }
+        
+            .content h3 {
+                margin: 0;
+                font-size: 1.5rem;  /* Reducido desde 2rem */
+            }
+        
+            .content p {
+                margin-top: 20px;  /* Reducido el margin-top */
+                line-height: 1.5em;
+            }
+        
+            .content h3:before {
+                content: "";
+                position: absolute;
+                bottom: -15px;  /* Ajustado */
+                height: 3px;  /* Ajustado */
+                background-color: #3e3;
+                width: 50px;  /* Ajustado */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        
+            .btn {
+                background-color: #3e3;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                padding: 0.3rem 0.7rem;  /* Reducido el padding */
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+        
+            .btn:hover {
+                background-color: #2e2;
+                transform: scale(1.05);
+            }
+        
+            .slider {
+                width: 250px;  /* Reducido desde 310px */
+                height: 200px;  /* Reducido desde 300px */
+                background-color: #222;
+                margin: 0.5rem 0 2rem 0;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+                .slide {
+                    margin: 0;
+                    padding: 0;
+                    flex: 0 0 250px;  /* Ajustado */
+                }
+        
+                .image-container {
+                    width: 750px;  /* Ajustado */
+                    height: 200px;  /* Ajustado */
+                    display: flex;
+                    transition: transform 0.5s ease;
+        
+                    img {
+                        width: 250px;  /* Ajustado */
+                        height: 200px;  /* Ajustado */
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                }
+        
+                #slide-1:target~.image-container {
+                    transform: translateX(0);
+                }
+        
+                #slide-2:target~.image-container {
+                    transform: translateX(-250px);  /* Ajustado */
+                }
+        
+                #slide-3:target~.image-container {
+                    transform: translateX(-500px);  /* Ajustado */
+                }
+        
+                .buttons {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: flex;
+                    gap: 10px;
+        
+                    a {
+                        display: inline-block;
+                        height: 10px;  /* Reducido */
+                        width: 10px;  /* Reducido */
+                        border-radius: 50%;
+                        background-color: #3e3;
+                        transition: background-color 0.3s;
+                    }
+        
+                    a:hover {
+                        background-color: #8f8989;
+                    }
+        
+                    a:active {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        
+            .card-content {
+                p {
+                    font-size: 2vh;  /* Reducido */
+                    margin-top: 1rem;  /* Ajustado */
+                    font-weight: 600;
+                    font-family: "Montserrat", sans-serif;
+                }
+        
+                a {
+                    font-size: 2vh;  /* Reducido */
+                    margin-top: 1rem;  /* Ajustado */
+                    font-weight: 300;
+                    font-family: "Montserrat", sans-serif;
+                    align-content: center;
+                }
+            }
+        }
+    }
+    
+   
+    
+   
 }

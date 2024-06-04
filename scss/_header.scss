@@ -1,5 +1,6 @@
 @import "var";
 header {
+    width: 100%;
     height: 1000px;
     margin-bottom: 5rem;
     grid-area: header;
@@ -9,6 +10,7 @@ header {
         justify-content: space-evenly;
     }
     .header_menuinicio {
+       
         display: flex;
         justify-content: space-between;
     }
@@ -16,67 +18,194 @@ header {
         text-align: center;
         color: white;
         padding: 2rem;
-        background-color: #00000081;
+        background-color: rgba(35, 42, 53, 0.507);
     }
-    .header_navMenu {
+    .header_navmenu {
         display: flex;
         align-items: start;
     }
-    .header_logoPequeño {
+    .header_logopequeño {
         margin: 3rem;
         width: 200px;
-        border: solid;
+        border: solids;
         text-align: start;
     }
     .header_ul_botones {
+        background-color: rgba(35, 42, 53, 0.507);
         margin: 3rem;
 
     }
     .header_ul_botones li {
-        background: rgba(0, 0, 0, 0.555);
         margin: 2rem;
         padding: 0.1rem;
-        display: inline;
-        font-size: 22px;
+        display: inline-block;
+        font-size: 23px;
     }
     
     .header_ul_botones li a {
+        transition: color 2s;
         transition: border-color 2s, color 0.3s;
+        display: flex;
         color: rgb(235, 232, 232);
+        p{
+            transition: color 1s;
+            color: #00000000;
+        }
     }
     .header_ul_botones li a:hover {
         color: $titleColor;
+        p{
+            color: $titleColor;
+        }
         border-radius: 10%;
-        background: #27262642;
         transform: scale(1.05);
     }
 
 }
 .header_index{
-background-image: url("../Assets/Imgs/FotoBoxeoFondo.svg");
-height: 700px;
+    background-image: url("../Assets/Imgs/FotoBoxeoFondo.svg");
+    height: 700px;
+    width: 100%;
 }
 .header_boxeo{
     background-image: url("../Assets/Imgs/FondoBoxeo.svg");
     height: 700px;
+    width: 100%;
 }
-.header_galeria{
+.header_tienda{
     background-image: url("../Assets/Imgs/fondoGaleria.svg");
-    height: 900px;
+    height: 600px;
+    width: 100%;
 }
 .header_contact{
     background-image: url("../Assets/Imgs/fontoContactanos.svg");
+    height: 1400px;
+    width: 100%;
+}
+.header_contactanos{
     height: 1200px;
 }
 .header_musculacion{
     background-image: url("../Assets/Imgs/fotofondoGimnasio.svg");
     height: 700px;
+    width: 100%;
 }
-.header_background , .header_index, .header_boxeo{
+.header_background, .header_boxeo{
+    width: 100%;
     background-size:cover; 
     background-position:center;
     background-repeat: no-repeat;
     -webkit-box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 2px 0px 30px 10px rgba(0, 0, 0, 0.5);
     box-shadow: 2px -0px 30px 10px rgba(0, 0, 0, 0.5);
+}
+.img_animacion:hover{
+    opacity: 1.0;
+  
+}
+.imagen_seccion{
+    max-width: 430px;
+}
+.imagen_seccion-description{
+    display: flex;
+    text-align: center;
+    width: 21.9rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-bottom: black 1px solid;
+}
+img{
+    -webkit-box-shadow:$sombraGrisDos;
+    -moz-box-shadow:$sombraGrisDos;
+    box-shadow:$sombraGrisDos;
+}
+.imagen_seccion h6{
+    img {
+        max-height: 175px;
+        transition: none;
+        transform: none;
+    }
+    margin-top: 15rem;
+    height: 100px;
+    font-size: 1.9rem;
+    text-align: center;
+    background-color:rgb(24, 46, 75)  ;
+    display: flex;
+    flex-direction: column-reverse;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+.imagen_seccion h6:hover{
+    background: $colorNaranjaRojizo;
+}
+@media (max-width: 1340px) {
+    header{
+    
+        margin-bottom: 0rem;
+        .header_menuinicio{
+            background-color: $sombraAzulOscuro;
+            align-items: center;
+            margin-bottom: 11rem;
+            .header_logopequeño{
+                margin-bottom: 0.3rem;
+                margin-top: 0.5rem;
+                width: 10%;
+            }
+            ul{
+                margin:0.3rem 0.3rem 0.3rem 0.2rem;
+            
+                li{
+                    margin: 0.3rem;
+                    background: none;
+                    a{
+                        font-size: 2vh;
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1100px) {
+    header{
+        .Header_contactanos{
+            height: 1600px;
+        }
+        .header_imagenes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .imagen_seccion{
+                justify-self: center;
+            }
+        }
+        height: 1600px;
+        margin-bottom: 30rem;
+        .header_menuinicio{
+            background-color: $sombraAzulOscuro;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 11rem;
+            .header_logopequeño{
+                margin-bottom: 0.2rem;
+                margin-top: 0.3rem;
+                width: 10%;
+            }
+            ul{
+                margin:0.5rem 0.5rem 0.3rem 0.2rem;
+            
+                li{
+                    margin: 0.3rem;
+                    background: none;
+                    a{
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
 }
